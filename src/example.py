@@ -2,4 +2,6 @@ import sys
 import pyfiglet
 
 if __name__ == "__main__":
-  print(pyfiglet.figlet_format(sys.argv[1]), end="")
+  with open(sys.argv[0], "r") as f:
+    print(pyfiglet.figlet_format(f.read()), end="")
+  
